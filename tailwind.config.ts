@@ -127,10 +127,18 @@ export default {
 				'glow': '0 0 15px rgba(120, 120, 255, 0.3)',
 				'sharp': '0 1px 3px rgba(0, 0, 0, 0.12)'
 			},
-			backdropFilter: {
-                'blur-5': 'blur(5px)',
-                'blur-10': 'blur(10px)',
-                'blur-15': 'blur(15px)',
+			backdropBlur: {
+                'none': '0',
+                'sm': '4px',
+                'DEFAULT': '8px',
+                'md': '12px',
+                'lg': '16px',
+                'xl': '24px',
+                '2xl': '40px',
+                '3xl': '64px',
+                '5': '5px',
+                '10': '10px',
+                '15': '15px',
             },
 		}
 	},
