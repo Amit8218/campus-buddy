@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface NavbarProps {
@@ -36,36 +36,50 @@ export function Navbar({ className }: NavbarProps) {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
+            <CheckCircle className="h-6 w-6 text-primary mr-2" />
             <span className="font-display text-xl font-bold">Campus Buddy</span>
           </Link>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a 
-              href="#" 
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
-              Features
-            </a>
-            <a 
-              href="#" 
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
-              About
-            </a>
-            <a 
-              href="#" 
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
-              Contact
-            </a>
+            <div className="relative group">
+              <a 
+                href="#" 
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              >
+                Products
+              </a>
+              <div className="absolute h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300 ease-in-out"></div>
+            </div>
+            <div className="relative group">
+              <a 
+                href="#" 
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              >
+                Pricing
+              </a>
+              <div className="absolute h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300 ease-in-out"></div>
+            </div>
+            <div className="relative group">
+              <a 
+                href="#" 
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              >
+                Resources
+              </a>
+              <div className="absolute h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300 ease-in-out"></div>
+            </div>
           </nav>
           
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
-              Sign In
+            <Button variant="outline" size="sm" className="border-secondary hover:border-primary">
+              Sign in
             </Button>
-            <Button size="sm">
-              Get Started
+            <Button size="sm" className="bg-primary text-background hover:bg-primary/90">
+              Get started
+              <svg className="ml-1 h-4 w-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.33301 8H12.6663" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M8 3.33337L12.6667 8.00004L8 12.6667" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </Button>
           </div>
           
@@ -87,28 +101,28 @@ export function Navbar({ className }: NavbarProps) {
                 href="#" 
                 className="text-sm font-medium text-foreground hover:text-primary transition-colors"
               >
-                Features
+                Products
               </a>
               <a 
                 href="#" 
                 className="text-sm font-medium text-foreground hover:text-primary transition-colors"
               >
-                About
+                Pricing
               </a>
               <a 
                 href="#" 
                 className="text-sm font-medium text-foreground hover:text-primary transition-colors"
               >
-                Contact
+                Resources
               </a>
             </nav>
             
             <div className="flex flex-col space-y-2">
-              <Button variant="outline" className="w-full justify-center">
-                Sign In
+              <Button variant="outline" className="w-full justify-center border-secondary hover:border-primary">
+                Sign in
               </Button>
-              <Button className="w-full justify-center">
-                Get Started
+              <Button className="w-full justify-center bg-primary text-background hover:bg-primary/90">
+                Get started
               </Button>
             </div>
           </div>
