@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -14,25 +13,15 @@ export function HeroSection() {
         <div className="animate-fade-in">
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
             <span className="text-white">Simplify</span><br />
-            <span className="text-primary">compliance</span><br />
-            <span className="text-white">with Google</span>
+            <span className="text-primary">compliance</span>
           </h1>
+          <p className="text-xl text-muted-foreground mt-4 max-w-2xl mx-auto animate-slide-up [animation-delay:0.2s] [animation-fill-mode:backwards]">
+            Intelligent solutions for streamlining your compliance workflow
+          </p>
         </div>
         
-        <div className="my-12 code-background animate-slide-up [animation-delay:0.3s] [animation-fill-mode:backwards]">
-          <div className="code-line">import java.util.List;</div>
-          <div className="code-line">import java.net.http.HttpResponse;</div>
-          <div className="code-line">import java.net.URI;</div>
-          <div className="code-line">&nbsp;</div>
-          <div className="code-line">@RestController</div>
-          <div className="code-line">public class DataController {'{'}</div>
-          <div className="code-line">&nbsp;</div>
-          <div className="code-line">  @GetMapping("/getPartnerAccountId")</div>
-          <div className="code-line">  public String getPartnerAccountId(@RequestParam("userId") String userId) {'{'}</div>
-        </div>
-        
-        <div className="mt-8 flex flex-wrap justify-center gap-4 animate-slide-down [animation-delay:0.4s] [animation-fill-mode:backwards]">
-          <Button size="lg" className="font-medium bg-primary text-background hover:bg-primary/90">
+        <div className="mt-12 flex flex-wrap justify-center gap-4 animate-slide-down [animation-delay:0.4s] [animation-fill-mode:backwards]">
+          <Button size="lg" className="font-medium bg-primary text-background hover:bg-primary/90 animate-pulse-gentle">
             Start Chatting <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
           <Button size="lg" variant="outline" className="font-medium border-secondary hover:border-primary">
